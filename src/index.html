@@ -1,0 +1,80 @@
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>HTML 정규식 테스트</h1>
+    <div class="main">
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td class="labels">URL</td>
+          <td class="urlInput">
+            <label><input class="url"></label>
+          </td>
+          <td rowspan="2">
+            <button class="htmlButton" onclick="input()">HTML 가져오기</button>
+          </td>
+          </tr>
+          <tr>
+            <td class="labels">Charset</td>
+          <td>
+            <label><input class="charset" type="text"></label>
+          </td>
+        </tr>
+        <tr>
+          <td class="labels">HTML</td>
+          <td class="viewContent" colspan="2">
+            <label>
+              <textarea class="view"></textarea>
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td class="labels">추출 정규식</td>
+          <td>
+            <label><input class="match" type="text"></label>
+          </td>
+          <td>
+            <button onclick="inputMath()">추출</button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">
+            <label>
+              <textarea class="viewMath"></textarea>
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td class="labels">치환 정규식</td>
+          <td>
+            <label><input class="match2" type="text"></label>
+          </td>
+          <td>
+            <button onclick="inputMath2()">추출</button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">
+            <label>
+              <textarea class="viewMath2"></textarea>
+            </label>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+  </body>
+<script src="./news.js"></script>
+</html>

@@ -1,0 +1,67 @@
+{
+  "name": "news",
+  "productName": "news",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --windows nsis:ia32",
+    "make": "node_modules/.bin/electron-forge make",
+    "publish": "node_modules/.bin/electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "build": {
+    "productName": "News",
+    "appId": "ysi.news",
+    "asar": true,
+    "protocols": {
+      "name": "news",
+      "schemes": [
+        "helloelectron"
+      ]
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "icon": "./resources/installer/Icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "buildResources": "./resources/installer/",
+      "output": "./dist/",
+      "app": "."
+    }
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^30.0.9",
+    "electron-builder": "^25.0.0-alpha.9"
+  },
+  "keywords": [],
+  "author": {
+    "name": "yeosuin",
+    "email": "immof@naver.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "electron-squirrel-startup": "^1.0.1",
+    "electron-updater": "^6.3.0-alpha.4",
+    "iconv-lite": "^0.6.3",
+    "jschardet": "^3.1.2",
+    "lts": "^1.2.0"
+  }
+}
