@@ -15,3 +15,6 @@ HTML → 추출 → 치환
 추출 정규식 예) <title>(?<text>.*?)</title>
 
 치환 정규식 예)^(\s)+|<div(.+?)</div>|</?[a-zA-Z](\w)*[^<>]*/?>(\s)*|<!\-\-[\s\S]*?\-\->|\[(.+?)\](\s)*|&#?(\w)+;?|[\r\n\t"'"‘’“”]
+
+
+[위 파일 다운로드 링크](https://drive.google.com/file/d/1JCYpp21JNkd8KuBX8tCnpc-y0-PWUUsJ/view?usp=sharing)
