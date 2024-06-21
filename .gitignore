@@ -94,3 +94,5 @@ out/
 
 */node_modules
 */dist
+/dist
+/.idea
