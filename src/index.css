@@ -3,7 +3,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  body { background-color: #ddd; color: black; }
+  body { background-color: lightgray; color: black; }
 }
 
 body {

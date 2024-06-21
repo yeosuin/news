@@ -37,6 +37,7 @@ const input = () => {
 			}
 		});
 	}catch (error) {
+		content.innerText = ' ';
 		console.log(error.message);
 	}
 }
@@ -53,14 +54,22 @@ close2.addEventListener('click', (e) => {
 })
 
 const inputMath = () => {
-	const mathe_Reg = document.getElementsByClassName('match')[0].value;
-	document.getElementsByClassName('viewMath')[0].innerText = RegExp(mathe_Reg).exec(content.textContent)[0];
+	try {
+		const mathe_Reg = document.getElementsByClassName('match')[0].value;
+		document.getElementsByClassName('viewMath')[0].innerText = RegExp(mathe_Reg).exec(content.textContent)[0];
+	} catch (error) {
+		document.getElementsByClassName('viewMath')[0].innerText = '정규식이 맞지 않거나 비워져 있습니다.';
+	}
 }
 
 const inputMath2 = () => {
-let regView = document.getElementsByClassName('viewMath')[0].defaultValue;
-	const mathExp = document.getElementsByClassName('match2')[0].value
-	let newExp = new RegExp(mathExp, "gi");
-	let inputEXP = regView.replace(newExp,'');
-	document.getElementsByClassName('viewMath2')[0].innerText += inputEXP;
+	try {
+		let regView = document.getElementsByClassName('viewMath')[0].defaultValue;
+		const mathExp = document.getElementsByClassName('match2')[0].value
+		let newExp = new RegExp(mathExp, "gi");
+		let inputEXP = regView.replace(newExp,'');
+		document.getElementsByClassName('viewMath2')[0].innerText += inputEXP;
+	} catch (error) {
+		document.getElementsByClassName('viewMath2')[0].innerText = '정규식이 맞지 않거나 비워져 있습니다.';
+	}
 }
